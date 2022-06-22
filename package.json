@@ -4,11 +4,15 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "NODE_OPTIONS=--max_old_space_size=12000 vue-tsc --noEmit && NODE_OPTIONS=--max_old_space_size=12000 vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babylonjs/core": "^5.0.0-rc.13",
+    "@babylonjs/core": "^4.2.0",
+    "@babylonjs/gui": "^4.2.0",
+    "@babylonjs/inspector": "^4.2.0",
+    "@babylonjs/loaders": "^4.2.2",
+    "babylon-vrm-loader": "^1.6.0",
     "vue": "^3.2.25"
   },
   "devDependencies": {
