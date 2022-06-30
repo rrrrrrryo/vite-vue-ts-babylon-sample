@@ -153,14 +153,14 @@ function judge_piece(holistic_result: Results){
     flg = false;
     if (holistic_result.rightHandLandmarks !== undefined){
         const righthand = holistic_result.rightHandLandmarks
-        let vec_indexfinger = new Vector3((righthand[8].x-righthand[5].x), (righthand[8].y-righthand[5].y), (righthand[8].z-righthand[5].z));
-        let vec_middlefinger = new Vector3((righthand[12].x-righthand[9].x), (righthand[12].y-righthand[9].y), (righthand[12].z-righthand[9].z));
+        let vec_indexfinger = new Vector3((righthand[8].x-righthand[5].x)*1280, (righthand[8].y-righthand[5].y)*720, (righthand[8].z-righthand[5].z)*1280);
+        let vec_middlefinger = new Vector3((righthand[12].x-righthand[5].x)*1280, (righthand[12].y-righthand[5].y)*720, (righthand[12].z-righthand[5].z)*1280);
         console.log(Vector3.Dot(vec_indexfinger.normalize(), vec_middlefinger.normalize()))
         const deg = Math.acos(Vector3.Dot(vec_indexfinger.normalize(), vec_middlefinger.normalize()))*(180/Math.PI)
-        if (deg > 45){
+        console.log(deg);
+        if (deg > 40){
             flg = true;
         }
-        flg = true;
     }
     return flg;
 }
