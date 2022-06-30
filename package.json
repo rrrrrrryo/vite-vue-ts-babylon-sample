@@ -12,6 +12,9 @@
     "@babylonjs/gui": "^4.2.0",
     "@babylonjs/inspector": "^4.2.0",
     "@babylonjs/loaders": "^4.2.2",
+    "@mediapipe/camera_utils": "^0.3.1640029074",
+    "@mediapipe/drawing_utils": "^0.3.1620248257",
+    "@mediapipe/holistic": "^0.5.1635989137",
     "babylon-vrm-loader": "^1.6.0",
     "vue": "^3.2.25"
   },

@@ -4,7 +4,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from '@vue/runtime-core';
-import { createScene} from '../scenes/VRMtest';
+import { createScene } from "../script/script"
+// import { createScene} from '../scenes/VRMtest';
 
 const name = 'BabylonScene';
 const bjsCanvas = ref(null);
@@ -25,16 +26,15 @@ onMounted(() => {
         padding: 0;
         /* width: 100vw; */
         /* height: 100vh; */
-        width: 100%;
-        height: 100%;
+        /* width: 100%; */
+        /* height: 100%; */
     }
     #renderCanvas {
-
         margin: 0;
         padding: 0;
         width: 960px;
         height: 540px;
-        /* width: 100%; */
-        /* height: 100%; */
+        /* width: 70%; */
+        /* height: 70%; */
     }
 </style>

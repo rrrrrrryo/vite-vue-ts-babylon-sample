@@ -3,13 +3,13 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import HelloWorld from './components/HelloWorld.vue'
 import BabylonScene from './components/BabylonScene.vue';
+import Mediapipe from './components/Mediapipe.vue';
 </script>
 
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <br>
-  <BabylonScene />
+  <!-- <BabylonScene /> -->
+  <Mediapipe />
 </template>
 
 <style>
@@ -20,6 +20,7 @@ import BabylonScene from './components/BabylonScene.vue';
   text-align: center;
   vertical-align: middle;
   color: #2c3e50;
+  display: flex;
   /* margin-top: 60px; */
 }
 </style>
