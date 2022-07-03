@@ -36,8 +36,10 @@ onMounted(() => {
         height: 100%;
     }
     #CanvasContainer{
-        width: 50%;
-        height: 50%;
+        margin: 0;
+        padding: 0;
+        width: 20%;
+        height: 20%;
         align-self: flex-end;
     }
 </style>

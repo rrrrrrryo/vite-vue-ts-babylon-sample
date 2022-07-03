@@ -20,10 +20,10 @@ function createskybox(scene: Scene) {
 }
 
 function createActionManager(
-    scene: Scene, 
-    onForward: (delta: number) => void, 
-    onBackward: (delta: number) => void, 
-    onLeft: (delta: number) => void, 
+    scene: Scene,
+    onForward: (delta: number) => void,
+    onBackward: (delta: number) => void,
+    onLeft: (delta: number) => void,
     onRight: (delta: number) => void,
     onSmile: (flg: Boolean) => void,
     onStop: () => void)
@@ -47,7 +47,7 @@ function createActionManager(
     }));
     scene.actionManager.registerAction(new ExecuteCodeAction(ActionManager.OnKeyUpTrigger, function(evnt){
         const key: keyof inputMap = evnt.sourceEvent.keyCode;
-        inputKeyMap[key] = evnt.sourceEvent.type == "keydown";        
+        inputKeyMap[key] = evnt.sourceEvent.type == "keydown";
     }));
     scene.onBeforeRenderObservable.add(() => {
         const speed = scene.getEngine().getDeltaTime();
@@ -107,7 +107,7 @@ function createWakAnimationGroup(vrmManager: any, scene:Scene): AnimationGroup {
             [60, 0, 0, 0],
         ],
     };
-    
+
     const rightUpperLegAnim = {
         name: 'rightUpperLegAnim',
         keys: [

@@ -28,7 +28,7 @@ const drawCanvas = (canvas:any, video:any) => {
         holistic_result = results;
         drawresult(results, canvasCtx, CanvasWidth, CanvasHeight);
       }
-    
+
     const holistic = new Holistic({locateFile: (file) => {
         return `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`;
     }});
@@ -42,7 +42,7 @@ const drawCanvas = (canvas:any, video:any) => {
         minTrackingConfidence: 0.5
     })
     holistic.onResults(onResults);
-    
+
     const camera = new Camera(Video.value, {
         onFrame: async () => {
             await holistic.send({image: Video.value});
@@ -56,10 +56,10 @@ const drawCanvas = (canvas:any, video:any) => {
 
 // const canvas = <HTMLCanvasElement>document.getElementById('canvas');
 const createScene = (canvas: any) => {
-    
+
     const engine = new Engine(canvas);
     const scene = new Scene(engine);
-    
+
     const camera = new ArcRotateCamera('Camera', Math.PI / 2, Math.PI /2, 10, Vector3.Zero(), scene, true);
     camera.panningSensibility = 0;
     camera.wheelPrecision = 10;
